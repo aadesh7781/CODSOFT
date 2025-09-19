@@ -1,0 +1,107 @@
+Practical 1
+
+google hacking database
+1) webcam 
+2) error
+3) robot
+4) index
+
+terminal
+1) theHarvester -h
+2) theHarvester -d starbucks.in -b yahoo
+3) theHarvester -d starbucks.in -b yahoo --screenshot /home/saish/desktop/new/ -f /home/saish/desktop/new/blah.json 
+
+Practical 3: Maltego
+login maltego
+find censys and install (if not installed)
+Investigation tab >> New
+Entities Panel >> Domain >> Drag and Drop >> Change name
+Machine Tab >> Run Machine >> Comapny Stalker >> Domain name/link >> Run >> Proceed with selected
+Graph 1 >> Run Tab (below entities pallet >> Utilities >> Run All >> Dialog box appears >> Target Get Property : IP >> Run
+Look for DNS domain in graph >> Select >> Run pallet >> Resolve to IP >> Run all
+Click on IP adress below DNS on graph >> Run Pallet >> To details >> Run All
+*If DNS not found on graph, you can searxh it in entities pallet*
+
+
+
+Practical 3
+Terminal
+1) sudo nu
+2) nmap myntra.in
+3) nmap -sS -O myntra.in 
+4) nmap -sU -sS -T4 myntra.in 
+5) nmap -sT myntra
+6) nikto -h myntra.in 
+
+Practical 5 Cryptanalysis
+XOR gate converstion blah blah
+XOR Brute converstion key checker blah blah 
+
+md5generator simple words apple,airplane,etc
+make a file store it somewhere, write the hashed values in this file
+
+write this to show all the actual passwords which are words of hashed values
+1) john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt finding.txt
+
+write this to show all the passwords 
+2) john --show --format=raw-md5 finding.txt
+
+make new wordlist file containing random words and add the hashed values in the finding.txt file 
+3) john --format=raw-md5 --wordlist=/home/saish/Documents/wordlist.txt finding.txt
+
+#hmac generator 
+4) hashcat -a 0 -m 150 hmachashedvals.txt mywordlist.txt
+
+Practical 6 DVWA
+
+apt update
+systemctl restart mysql
+systemctl restart apache2
+
+127.0.0.1/DVWA/login.php
+
+user=admin
+password=password
+
+"invalid path var/www/html/uploads"(aisa kuch)
+if you get the path error write the following command
+chmod -R 777 (path)
+
+File Upload
+github backdoorhub download ak47shell.php 
+php>ak47shell.php
+
+Practical 7 DVWA
+search SQL injection vulnerability medium 
+
+find and paste it in the section of SQL Injection id=1 OR 1+1
+
+Practical 8 
+terminal
+1) setoolkit
+
+press=> 1) Social Engineering Attack
+then=> 2) Website Attack Vectors
+then=> 3) Credential Harvester Attack Method
+then=> 2) Site Cloner
+
+Enter IP college VM will be [10.0.2.15]
+
+clone any login page eg. https://github.com/login
+
+enter url 10.0.2.15
+
+Prac9
+Root terminal 
+1) openssl passwd -6 password123
+
+(for step 2 make sure to cd in the folder you want the file to be in)
+2) echo 'student:(paste the hashed encryption)' > filename.txt
+3) john --wordlist=usr/share/wordlists/rockyou.txt filename.txt
+
+if rockyou.txt does not work make sure it's unzipped 
+sudo gunzip rockyou.txt
+
+Practical 10 
+write this in the XSS (Reflected) Section 
+<script>alert(document.cookie)</script>
